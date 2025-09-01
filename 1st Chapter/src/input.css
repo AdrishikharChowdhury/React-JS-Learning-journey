@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Optional: Custom Theme Example */
+@theme {
+  --color-brand: #1d4ed8; /* A blue shade */
+}
+
+/* Optional: Custom Utility Example */
+@layer utilities {
+  .text-brand {
+    color: var(--color-brand);
+  }
+}
