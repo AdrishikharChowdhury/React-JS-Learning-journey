@@ -33,8 +33,8 @@ To run any of the projects locally:
 
 ```
 
-git clone https://github.com/yourusername/react-learning-codes.git
-cd react-learning-codes/project-folder-name
+git clone https://github.com/AdrishikharChowdhury/React-JS-Learning-journey.git
+cd React-JS-Learning-journey
 
 ```
 
