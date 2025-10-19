@@ -1,1 +1,7 @@
-[{"name":"John Doe","email":"johndoe@example.com","password":"johndoe1234"},{"name":"Adrishikhar Chowdhury","email":"amiadrishikhar@gmail.com","password":"rishi1234"}]
+[
+  {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "password": "johndoe1234"
+  }
+]
