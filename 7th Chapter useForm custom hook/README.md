@@ -1,14 +1,16 @@
 # 7th Chapter: useForm Custom Hook
 
-This project is a simple React application that demonstrates the use of custom hooks, specifically `useForm` and `useFetch`. It features a basic form that allows users to input their name, email, and password. The submitted data is then displayed below the form in real-time without a page reload.
+This project is a simple React application that demonstrates the use of custom hooks, specifically `useForm`, `useFetch`, `usePost`, and `useDELETE`. It features a basic form that allows users to input their name, email, and password. The submitted data is then displayed below the form in real-time without a page reload, and users can delete entries.
 
 ## Features
 
 *   A simple and clean user interface.
 *   A basic form with name, email, and password fields.
 *   A custom `useForm` hook to manage the form's state.
-*   A custom `useFetch` hook to fetch data from the server and refetch it after a new entry is submitted.
-*   Real-time UI updates after form submission.
+*   A custom `useFetch` hook to fetch data from the server and refetch it after a new entry is submitted or an entry is deleted.
+*   A custom `usePost` hook to handle form submissions.
+*   A custom `useDELETE` hook to handle deleting entries.
+*   Real-time UI updates after form submission and deletion.
 
 ## Technologies Used
 
@@ -21,10 +23,11 @@ This project is a simple React application that demonstrates the use of custom h
 
 ## Backend
 
-The backend is a simple Express server that provides two API endpoints:
+The backend is a simple Express server that provides the following API endpoints:
 
 *   `GET /forms`: Fetches all the submitted form data from the `formdata.json` file.
 *   `POST /forms`: Adds a new form submission to the `formdata.json` file.
+*   `DELETE /forms/:id`: Deletes a form submission from the `formdata.json` file based on the provided `id`.
 
 The server uses the `cors` middleware to handle cross-origin requests.
 
@@ -48,7 +51,11 @@ node src/js/index.js
     ```bash
     npm install
     ```
-4.  **Start the development server:**
+4.  **Create a `.env` file** in the root of the project and add the following environment variable:
+    ```
+    VITE_BASE_URL="http://localhost:5000/forms"
+    ```
+5.  **Start the development server:**
     ```bash
     npm run dev
     ```
@@ -58,15 +65,13 @@ node src/js/index.js
 ```
 /7th Chapter useForm custom hook/
 ├───.gitignore
+├───.env
 ├───eslint.config.js
 ├───index.html
 ├───package-lock.json
 ├───package.json
 ├───README.md
-├───tailwind.config.js
 ├───vite.config.js
-├───dist/
-├───node_modules/
 ├───public/
 │   └───vite.svg
 └───src/
@@ -76,14 +81,18 @@ node src/js/index.js
     ├───assets/
     │   └───react.svg
     ├───components/
+    │   ├───EntryCard.jsx
     │   ├───Entrysection.jsx
     │   └───Form.jsx
     ├───data/
     │   └───formdata.json
     ├───hooks/
     │   ├───useFetch.jsx
-    │   └───useForm.jsx
+    │   ├───useForm.jsx
+    │   ├───usePost.jsx
+    │   └───useDELETE.jsx
     └───js/
+        ├───config.js
         └───index.js
 ```
 

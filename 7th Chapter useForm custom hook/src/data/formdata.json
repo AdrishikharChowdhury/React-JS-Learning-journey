@@ -1,7 +1,1 @@
-[
-  {
-    "name": "John Doe",
-    "email": "johndoe@example.com",
-    "password": "johndoe1234"
-  }
-]
+[{"id":"36b8f84d-df4e-4d49-b662-bcde71a8764f","name":"John Doe","email":"johndoe@example.com","password":"johndoe1234"},{"name":"Dev","email":"dev@example.com","password":"dev1234","id":"e6b269cb-ff8e-4f5f-bd1f-45252ca86f04"}]

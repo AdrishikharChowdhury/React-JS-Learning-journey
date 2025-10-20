@@ -1,17 +1,18 @@
-import React,{ useState } from "react"
+import React, { useState } from "react";
 
-export const useForm=()=>{
+export const useForm = () => {
   const [form, setForm] = useState({
-    "name":"",
-    "email":"",
-    "password":""
-  })
+    name: "",
+    email: "",
+    password: "",
+  });
 
-  const handleChange=(e)=>{
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm(prev=>({
-      ...prev,[name]:value
-    }))
-  }
-  return { form, handleChange,setForm}
-}
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  return { form, handleChange, setForm };
+};
