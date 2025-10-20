@@ -32,6 +32,9 @@ Focuses on the `useRef` hook, demonstrating how to access and manipulate DOM ele
 ### 6th Chapter: React Router
 This chapter implements client-side routing using `react-router-dom`. It includes creating a multi-page application with a navigation bar, footer, and nested routes.
 
+### 7th Chapter: Custom Hooks - `useForm`
+This chapter focuses on creating and using custom hooks in React. It includes a `useForm` hook for managing form state and handling changes, as well as `useFetch`, `usePost`, and `useDELETE` hooks for making API requests. The project demonstrates how to build a form that uses these custom hooks to interact with a backend service.
+
 ## Technologies Used
 
 Across these projects, the following technologies are used:
